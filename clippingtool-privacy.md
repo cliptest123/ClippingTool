@@ -1,28 +1,38 @@
-# ClippingTool privacy policy
+# ClippingTool Privacy Policy
 
-Last updated: October 23, 2026
+Last updated: 12 November 2026
 
-ClippingTool is a personal tool that runs on its owner's own computer. It turns the owner's Twitch and YouTube streams into short vertical clips and uploads them to the owner's YouTube channel. It is not offered as a service to anyone else.
+ClippingTool is a personal desktop tool. It runs only on its owner's own computer and turns the owner's own stream recordings into short vertical clips. It then publishes those clips to the owner's own YouTube channel and TikTok account. There is no server, website or account system. No one else can sign in to it.
 
 ## What it accesses
 
-When you connect a YouTube account, ClippingTool asks Google for permission to upload videos to that channel (the `youtube.upload` scope). It uses that permission only to upload clips you have approved in the app, with the title, description and hashtags you set.
+**YouTube (Google).** With your permission (the `youtube` scope), ClippingTool can:
 
-## Where data is stored
+- read your channel's name and ID
+- upload the clips you approve as private videos with a scheduled publish time
+- change the schedule of those videos, or delete them if you withdraw a clip before it goes public
+- check whether they went public
 
-Everything stays on the computer running ClippingTool: downloaded audio and video, transcripts, rendered clips, and the sign-in token Google issues. The token is stored in the operating system's credential store. No data is sent to the developer or to any server the developer runs.
+**TikTok.** With your permission (the `user.info.basic` and `video.upload` scopes), ClippingTool can:
 
-## Who data is shared with
+- read your display name and account ID
+- send the clips you approve to your TikTok inbox, where you finish and post them in the TikTok app
+- check the status of those uploads
 
-- **Google / YouTube**, to upload the clips you approve.
-- **Anthropic (Claude API)**, which receives short transcript excerpts and chat summaries to help pick clips. It does not receive your Google account data or sign-in token.
+## What it stores, and where
 
-ClippingTool does not sell data, show ads, or use analytics or tracking.
+Sign-in tokens for YouTube and TikTok, and the app credentials needed to use them, are kept in the operating system's credential store on your computer (Windows Credential Manager). Clip files and posting history are kept in local files and a local database on the same computer. Nothing is sent to the developer or to anyone else. The only exception is the uploads to YouTube and TikTok that you approve.
 
-## Removing access
+## Sharing
 
-Remove ClippingTool's access to your Google account at any time at https://myaccount.google.com/permissions. Deleting ClippingTool's folders removes everything it stored locally.
+ClippingTool does not sell, share or transfer any data to third parties. It does not use data for advertising or analytics, and it does not use data to train AI models.
+
+ClippingTool's use of information received from Google APIs follows the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
+## Removing access and data
+
+You can disconnect at any time with `clip youtube disconnect` or `clip tiktok disconnect`. Either command deletes the stored tokens and revokes them. You can also remove access in your [Google account permissions](https://myaccount.google.com/permissions) or in TikTok under *Settings and privacy > Security > Apps and services*. Deleting the tool's folders removes all local data.
 
 ## Contact
 
-willgoyens23@gmail.com
+Questions: clipshowcaseshorts@gmail.com
